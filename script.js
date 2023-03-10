@@ -19,15 +19,12 @@ const overlay = document.querySelector(".overlay");
 const closeModalBtn = document.querySelector(".btn");
 const email = document.querySelector(".email");
 
-submitBtn.addEventListener("click", validate);
-
-function validate(e) {
+submitBtn.addEventListener("click", e => {
   e.preventDefault();
-
   if (email.value) {
     activateModal();
   }
-}
+});
 
 function activateModal() {
   modal.classList.remove("hiddenM");
